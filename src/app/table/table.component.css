@@ -1,0 +1,79 @@
+.headingcolor {
+    color: #667685;
+    font-size: 16px;
+    font-weight: 300;
+}
+.color {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 89px;
+    padding-left: 7px;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: -10px;
+}
+
+.leftmargin {
+    padding-right: 0px !important;
+    background-color: #FCFCFC !important;
+    padding-top: 2%;
+    margin-top: 0px!important;
+}
+.leftmargin1 {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.margin {
+    margin-top: 20px;
+}
+.textstyle {
+    margin-top: -18px;
+    color: grey;
+    font-size: 13px;
+    margin-left: 24px;
+    padding-bottom: 2%;
+    padding-left: 5px;
+}
+.minus {
+    width: 18px;
+    height: 2px;
+    background-color: #007AFF;
+    margin: 3px 0;
+}
+td {
+    color: #707070;
+    font-size: 12px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 25px;
+}
+.tble>thead>tr>th {
+    border-bottom: 1px solid #007AFF;
+    padding-right: 0px !important;
+    padding-left: 25px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+.tble>tbody>tr>td,
+.tble>tbody>tr>th,
+.tble>tfoot>tr>td,
+.tble>tfoot>tr>th,
+.tble>thead>tr>td,
+.tble>thead>tr>th {
+    padding-left: 24px;
+    padding-right: 18px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+td a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+.addsku{
+    margin-top: 20px;
+    background: white;
+    padding: 10px;
+    cursor: pointer;
+    float: right;
+    color: #007AFF;
+}

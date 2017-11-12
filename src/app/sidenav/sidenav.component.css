@@ -1,0 +1,86 @@
+.paddingLeft{
+ padding: 0px;
+ width: 22%;
+ background: #F7F7F7;
+ min-height: 677px;
+}
+.paddingright{
+  width: 78% !important;
+  margin: 0px;
+  padding: 0px;
+  background: #F7F7F7;
+  min-height: 678px;
+  border-left:1px solid #f0f0f0;
+}
+
+md-list-item p{
+  margin: 5px 5px 0px 10px;
+}
+
+.header{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 22px;
+  padding: 20px;
+}
+.md-subheader .md-subheader-inner {
+    display: block;
+    padding: 0px;
+}
+.md-subheader .md-subheader-content {
+    display: block;
+    color: #667685;
+    font-size: 26px !important;
+    padding: 55px;
+	margin-top: -7px;
+	background-color: rgba(123, 120, 120, 0.07);
+}
+md-list-item p.Active {
+    color: #1F8AFD;
+}
+md-list-item .child.Active {
+    color: #1F8AFD;
+}
+md-list-item{
+	font-size: 16px !important;
+	background-color: #F7F7F7;
+}
+md-list-item:hover {
+    cursor: pointer;
+    background-color: #e6e6e6;
+}
+md-icon.md-default-theme {
+    color: #1F8AFD !important;
+    opacity: 0.6;
+}
+md-icon.arrow {
+    color: #1F8AFD !important;
+    opacity: 0.6;
+    position: absolute;
+    right: 20px;
+}
+p {
+    color: #667685;
+}
+.child {
+    color: #667685;
+    margin-left: 55px;
+}
+a.logout:hover,
+a.logout:focus {
+    text-decoration: none;
+    color: #667685;
+    cursor: pointer
+}
+a.logout {
+  cursor: pointer;
+    font-size: 14px;
+    color: #667685;
+    text-decoration: none;
+}
+md-list-item .Active {
+    color: black;
+}
+md-progress-circular path {
+    stroke: #1F8AFD !important;
+}
