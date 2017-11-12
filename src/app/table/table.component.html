@@ -1,0 +1,44 @@
+<div class="col-md-12  tablebackground">
+  <div class="col-md-12 leftmargin">
+    <div class="padding">
+      <div class="minus"> </div>
+      <div class="minus"></div>
+      <div class="minus"></div>
+      <div class="textstyle">{{data.tabletitle}}</div>
+    </div>
+  </div>
+  <div class="col-md-12 leftmargin1">
+    <div style="background-color:#FCFCFC;">
+      <div class="col-md-12" style="background-color: #F7F8F7;">
+        <div class="col-md-9 color" style="padding-left:0px">
+          {{data.tableSubTitle}}
+        </div>
+        <div class="col-md-3">
+          <div *ngIf="data.alink.Text1" (click)="onadd()" class="addsku">
+              {{data.alink.Text1}}
+          </div>
+        </div>
+      </div>
+      <table class="table tble">
+        <thead>
+          <tr>
+            <th class="headingcolor" *ngFor="let data of data.values">{{data}}</th>
+            <th></th>
+            <th ng-if="data.Type=='SUBMIT'" *ngFor="let data of data.button">
+              <button type="submit" class="btn btn-primary"> {{data.Type}}</button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let list of outletList">
+            <td *ngFor="let item of list">{{item}}</td>
+            <td>
+              <a style="color:#007AFF;" >{{data.alink.Text}}</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- ng-class="tabledetails.alink.Text=='Edit' ?'linkWithPadding' :''" ng-click="onedit({data:viewdata[0]})" -->

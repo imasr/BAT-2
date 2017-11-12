@@ -1,0 +1,84 @@
+<mat-list class="col-md-3 paddingLeft">
+
+  <div class="header">Max Admin
+    <br>
+    <a class="logout" (click)="logout()">Logout</a>
+  </div>
+
+  <mat-list-item>
+    <mat-icon class="mat-default-theme material-icons">home</mat-icon>
+    <p ng-class="{ Active: template.isActive('/')}">Home</p>
+  </mat-list-item>
+
+  <mat-list-item (click)="Open('outlet')" style="border-bottom:1px solid #F1F1F1;">
+    <mat-icon class="mat-default-theme material-icons">insert_drive_file</mat-icon>
+    <p ng-class="{ Active: template.isActive('/outletViewTable')||template.isActive('/addOutlet')||template.isActive('/editOutlet')}">Outlets</p>
+    <mat-icon class="arrow" *ngIf="arrowOutlet">keyboard_arrow_right</mat-icon>
+    <mat-icon class="arrow" *ngIf="!arrowOutlet">keyboard_arrow_up</mat-icon>
+  </mat-list-item>
+
+  <mat-list-item routerLink="outletViewTable" *ngIf="OpenOutlet" style="background-color:rgba(128, 128, 128, 0.11);">
+    <span class="child" ng-class="{ Active: template.isActive('/outletViewTable')||template.isActive('/editOutlet')}">View Outlet</span>
+  </mat-list-item>
+
+  <mat-list-item routerLink="addOutlet" *ngIf="OpenOutlet" style="background-color:rgba(128, 128, 128, 0.11);">
+    <span class="child" ng-class="{ Active: template.isActive('/addOutlet')}">Add Outlet</span>
+  </mat-list-item>
+
+  <mat-list-item>
+    <mat-icon class="mat-default-theme material-icons">supervisor_account</mat-icon>
+    <p ng-class="{ Active: template.isActive('/addMembership')}">Rebate Requests</p>
+  </mat-list-item>
+
+  <mat-list-item>
+    <mat-icon class="mat-default-theme material-icons">account_balance_wallet</mat-icon>
+    <p ng-class="{ Active: template.isActive('/editMembership')}">Campaigns</p>
+  </mat-list-item>
+
+
+  <mat-list-item routerLink="uploadData">
+    <mat-icon class="mat-default-theme material-icons">face</mat-icon>
+    <p ng-class="{ Active: template.isActive('/uploadData')}">Upload Data </p>
+  </mat-list-item>
+
+  <mat-list-item (click)="Open('brand')" style="border-bottom:1px solid #F1F1F1;">
+    <mat-icon class="mat-default-theme material-icons">face</mat-icon>
+    <p ng-class="{ Active: template.isActive('/skuViewTable')||template.isActive('/brandViewTable')||template.isActive('/promotion')}">Brands</p>
+    <mat-icon class="mat-secondary arrow" *ngIf="arrowBrand" style="color:blue">keyboard_arrow_right</mat-icon>
+    <mat-icon class="mat-secondary arrow" *ngIf="!arrowBrand">keyboard_arrow_up</mat-icon>
+  </mat-list-item>
+
+  <mat-list-item *ngIf="OpenBrand" routerLink="skuViewTable" style="background-color:rgba(128, 128, 128, 0.11);">
+    <span class="child" ng-class="{ Active: template.isActive('/skuViewTable')||template.isActive('/addSku')||template.isActive('/editSku')}">All SKU</span>
+  </mat-list-item>
+
+  <mat-list-item *ngIf="OpenBrand" routerLink="brandViewTable" style="background-color:rgba(128, 128, 128, 0.11);">
+    <span class="child" ng-class="{ Active: template.isActive('/brandViewTable')||template.isActive('/addBrand')||template.isActive('/editBrand')}">All Brands</span>
+  </mat-list-item>
+
+  <mat-list-item *ngIf="OpenBrand" routerLink="promotion" style="background-color:rgba(128, 128, 128, 0.11);">
+    <span class="child" ng-class="{ Active: template.isActive('/promotion')}">All Promotions</span>
+  </mat-list-item>
+
+  <mat-list-item (click)="Open('setting')" style="border-bottom:1px solid #F1F1F1;">
+    <mat-icon class="mat-default-theme material-icons">face</mat-icon>
+    <p ng-class="{ Active: template.isActive('/tmeViewTable')||template.isActive('/viewMembership')}">Accounts & settings </p>
+    <mat-icon class="mat-secondary arrow" *ngIf="arrowSet">keyboard_arrow_right</mat-icon>
+    <mat-icon class="mat-secondary arrow" *ngIf="!arrowSet">keyboard_arrow_up</mat-icon>
+  </mat-list-item>
+
+
+  <mat-list-item *ngIf="OpenSetting" routerLink="tmeViewTable" style="background-color:rgba(128, 128, 128, 0.11);">
+    <span class="child" ng-class="{ Active: template.isActive('/tmeViewTable')||template.isActive('/addTme')||template.isActive('/TmeEdit')}">TME Setting</span>
+  </mat-list-item>
+
+  <mat-list-item *ngIf="OpenSetting" routerLink="viewMembership" style="background-color:rgba(128, 128, 128, 0.11);">
+    <span class="child" ng-class="{ Active: template.isActive('/viewMembership')}">Membership Setting</span>
+  </mat-list-item>
+
+</mat-list>
+
+<div class="col-md-9 paddingright" >
+  <router-outlet></router-outlet>
+</div>
+

@@ -1,0 +1,34 @@
+<div class="col-md-5 col-md-offset-3 loginbody">
+  <h3 align="center">Max - Admin Portal</h3>
+  <div class="panel loginbox">
+    <h4 class="signin">Sign In</h4>
+    <div class="col-md-offset-1 col-md-10">      ￼
+      <form [formGroup]="loginform" class="formId col-md-12" (ngSubmit)="login()">
+        <div class="alert alert-danger" *ngIf="messageAlert">{{message}}</div>
+        <mat-form-field class="input_width">
+          <span mdPrefix>
+            <mat-icon class="form_icon">email</mat-icon>
+          </span>
+          <input class="formEmail" matInput [formControl]="loginform.controls['username']" autocomplete="off" type="email" placeholder="Email Address"/>
+        </mat-form-field>
+        <div class="alertOninvalid" *ngIf="loginform.controls['username'].hasError('required') && loginform.controls['username'].touched">Please Enter email</div>
+        <mat-form-field class="input_width">
+          <span mdPrefix>
+            <mat-icon class="form_icon">lock</mat-icon>
+          </span>
+          <input class="formEmail" matInput autocomplete="off" [formControl]="loginform.controls['password']" type="password" placeholder="Password"/>
+        </mat-form-field>
+        <div class="alertOninvalid" *ngIf="loginform.controls['password'].hasError('required') && loginform.controls['password'].touched">Please Enter password</div>
+        <div class="alertOninvalid" *ngIf="loginform.controls['password'].hasError('minlength') && loginform.controls['password'].touched">Password must be at least 8 characters long.</div>
+
+        <mat-checkbox [formControl]="loginform.controls['checkbox']" class="blue checkbox">
+          Remember me
+        </mat-checkbox>
+        <mat-spinner class="spinner" mat-mode="indeterminate" *ngIf="isLoading"></mat-spinner>
+        <button mat-button class="mat-primary login" type="submit" *ngIf="buttonLogin" [disabled]="loginform.invalid">Login
+
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
