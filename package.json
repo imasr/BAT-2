@@ -8,9 +8,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+"postinstall": "ng build --aot -prod"
   },
-  "postinstall": "ng build --aot -prod",
+
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.4.4",
